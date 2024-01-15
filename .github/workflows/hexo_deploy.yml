@@ -1,17 +1,18 @@
 name: HEXO_DEPLOY
+
 on:
-push:
- branches:
-   - main
+  push:
+    branches:
+      - main
 jobs:
-build:
- runs-on: ubuntu-latest
+ build:
+  runs-on: ubuntu-latest
 
  steps:
    - name: Checkout source
      uses: actions/checkout@v1
      with:
-       ref: master
+       ref: main
    - name: Use Node.js ${{ matrix.node_version }}
      uses: actions/setup-node@v1
      with:
