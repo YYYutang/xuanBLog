@@ -20,7 +20,7 @@ open_graph:
 ######## Sidebar ########
 # 左上角显示的 logo 区域，包含图标、大标题、副标题
 logo:
-  avatar: '/picture/title.jpg' # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
+  avatar: /picture/title.jpg # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
   title: '小璇妙妙屋' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
   subtitle: '冻手冻手！准备学习' # '文字1 | 文字2' (鼠标放上去会切换到文字2)
 
