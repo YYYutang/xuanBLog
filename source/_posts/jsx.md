@@ -3,6 +3,7 @@ title: jsx基础知识
 categories: react
 tags: [react,前端,jsx]
 cover: /picture/react.jpg
+date: 2023-06-18 15:51
 ---
 
 # jsx语法
