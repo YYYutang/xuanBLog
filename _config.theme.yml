@@ -106,5 +106,6 @@ deploy:
   type: 'git'
   repo: git@github.com:yyyutang/YYYutang.github.io.git
   branch: main
+  message: ${{ github.event.head_commit.message }}
 
 >>>>>>> 214c1e34b32f98e92a9a045f163b42ff0b756c98
