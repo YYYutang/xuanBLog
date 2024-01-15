@@ -100,6 +100,72 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: stellar
 
+######## Tag Plugins ########
+tag_plugins:
+  # {% box %} / {% note %}
+  note:
+    default_color: '' # light, dark, red, orange, yellow, green, cyan, blue, purple, warning, error
+    border: true # true / false
+  # {% checkbox %}
+  checkbox:
+    interactive: false # enable interactive for user
+  # {% quot %}
+  quot:
+    default: # 可以自行配置多种图标方案
+      prefix: https://bu.dusays.com/2022/10/24/63567d3e092ff.png
+      suffix: https://bu.dusays.com/2022/10/24/63567d3e0ab55.png
+    hashtag:
+      prefix: https://bu.dusays.com/2022/10/24/63567d3e07da3.png
+  # {% emoji %}
+  emoji:
+    default: https://gcore.jsdelivr.net/gh/cdn-x/emoji/qq/${name}.gif
+    twemoji: https://gcore.jsdelivr.net/gh/twitter/twemoji/assets/svg/${name}.svg
+    qq: https://gcore.jsdelivr.net/gh/cdn-x/emoji/qq/${name}.gif
+    aru: https://gcore.jsdelivr.net/gh/cdn-x/emoji/aru-l/${name}.gif
+    tieba: https://gcore.jsdelivr.net/gh/cdn-x/emoji/tieba/${name}.png
+    blobcat: https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs/${name}.png
+  # {% image %}
+  image:
+    fancybox: false # true, false
+  # {% copy xxx %}
+  copy:
+    toast: 复制成功
+  # {% timeline %}
+  timeline:
+    max-height: 80vh
+  # {% mark %}
+  mark:
+    default_color: dark # light, dark, red, orange, yellow, green, cyan, blue, purple, warning, error
+  # {% hashtag %}
+  hashtag:
+    default_color: # red, orange, yellow, green, cyan, blue, purple
+  # {% okr o1 percent:0.5 status:normal %}
+  okr:
+    border: true # 是否显示边框
+    status: # 可以自行增加
+      # 进行中状态
+      in_track:
+        color: blue # red, orange, yellow, green, cyan, blue, purple
+        label: 正常
+      at_risk: 
+        color: yellow
+        label: 风险
+      off_track:
+        color: orange
+        label: 延期
+      # 结果状态
+      finished:
+        color: green
+        label: 已完成
+      unfinished:
+        color: red
+        label: 未完成
+  # {% gallery %}
+  gallery:
+    layout: grid # grid / flow
+    size: mix # s / m / l / xl / mix
+    ratio: square # origin / square
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
