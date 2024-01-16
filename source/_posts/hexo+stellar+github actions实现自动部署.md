@@ -2,7 +2,7 @@
 title: hexo+stellar+github actions实现自动部署
 categories: blog搭建
 tags: [blog,踩坑记录]
-cover: /picture/blog.png
+cover: /picture/blog.jpg
 date: 2024-01-16 20:49
 ---
 
@@ -13,6 +13,16 @@ date: 2024-01-16 20:49
 用持续部署，首先提交源码，然后在云端就自动生成(编译)、部署，这个生成、部署的工作是不需要在本地完成的，由github提供的 CI/CD 服务的服务器自动来完成。GitHub 免费提供的这项服务叫做 [GitHub Actions](https://github.com/features/actions "GitHub Actions")。
 
 ## 1. 前提工作
+
+本教程在以下环境搭建。
+
+```
+hexo: 6.3.0
+hexo-cli: 4.3.0
+os: win32 10.0.19042
+node: 16.17.1
+hexo-deployer-git: 4.0.0
+```
 
 ### 1.1创建所需仓库
 
@@ -149,13 +159,19 @@ jobs:
 
 仔细检查发现主题是通过THEME\_REPO设置的github连接引入的，而我github上fork的是一个比较早的版本的stellar，本地使用的\_config.theme.yml是最新版本的stellar里提供的配置文件。将github上的主题仓库更新至最新版，问题解决。
 
-![](image/image_XvDrAt19Cq.png)
+![](image_XvDrAt19Cq.png)
 
 3、报大量的语法错误
 
-![](image/image_TGTchTWkX1.png)
+![](image_TGTchTWkX1.png)
 
 是指定的node\_version过低的问题，最新版的stellar不适配12.x的版本，修改为15.x以上即可。
+
+4、报错ERROR Deployer not found: git，需要安装 hexo-deployer-git。
+
+```
+ npm install hexo-deployer-git --save
+```
 
 ## 3. 修改\_config.yml里的deploy配置
 
