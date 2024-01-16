@@ -49,3 +49,8 @@ recent:
 related:
   layout: related
 
+ghuser:
+  layout: ghuser
+  username: YYYutang# your github login username
+  avatar: true # show avatar or not
+  menu: true # show menu or not
