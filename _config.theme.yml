@@ -111,14 +111,14 @@ search:
 
 ######## Comments ########
 comments:
-  service: # beaudar, utterances, giscus, twikoo, waline, artalk
+  service: beaudar
   # beaudar
   # https://beaudar.lipk.org/
   beaudar:
-    repo: xxx/xxx
+    repo: YYYutang/blogComments
     issue-term: pathname
     issue-number:
-    theme: preferred-color-scheme
+    theme: github-light
     label:
     input-position: top # top/bottom 评论框位置
     comment-order: desc # desc 排序
@@ -491,7 +491,3 @@ api_host:
   ghraw: https://raw.githubusercontent.com
   gist: https://gist.github.com
 
-comments:
-  service: beaudar
-  beaudar:
-    repo: YYYutang/blogComments
