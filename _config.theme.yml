@@ -40,7 +40,7 @@ menu:
 site_tree:
   # 主页配置
   home:
-    sidebar: search, recent, ghuser, timeline, tagcloud
+    sidebar: search, ghuser, recent, timeline, tagcloud
   # 博客配置
   blog:
     base_dir: blog # 只影响自动生成的页面路径
