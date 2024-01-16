@@ -13,7 +13,7 @@ preconnect:
   # - https://unpkg.com
 
 open_graph:
-  enable: false
+  enable: true
   twitter_id: # for open_graph meta
 
 
@@ -46,7 +46,7 @@ site_tree:
     base_dir: blog # 只影响自动生成的页面路径
     menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
     sidebar: search_blog, recent, timeline # for categories/tags/archives
-    nav_tabs:  # 近期发布 分类 标签 专栏 归档 and ...
+    nav_tabs:  recent, categories, tags, archives, timeline# 近期发布 分类 标签 专栏 归档 and ...
       # '朋友文章': /friends/rss/
   # 博客文章配置
   post:
