@@ -7,7 +7,7 @@ date: 2023-06-18 15:45
 ---
 
 
-# 1.用jsx创建虚拟DOM
+## 1.用jsx创建虚拟DOM
 
 ```javascript
 const VDOM=(
@@ -16,7 +16,7 @@ const VDOM=(
 ReactDOM.render(VDOM,document.querySelector('.test'))
 ```
 
-# 2.用js创建虚拟DOM
+## 2.用js创建虚拟DOM
 
 ```javascript
 //1.创建虚拟DOM,创建嵌套格式的dom
@@ -25,7 +25,7 @@ const VDOM=React.createElement('h1',{id:'title'},React.createElement('span',{},'
 ReactDOM.render(VDOM,document.querySelector('.test')).
 ```
 
-# 3.虚拟DOM与真实DOM的区别
+## 3.虚拟DOM与真实DOM的区别
 
 1、虚拟DOM本质上就是Object类型的对象
 

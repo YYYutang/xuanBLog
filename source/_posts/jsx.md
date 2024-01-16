@@ -6,7 +6,7 @@ cover: /picture/react.jpg
 date: 2023-06-18 15:51
 ---
 
-# jsx语法
+## jsx语法
 
 JSX是类似于XML的js扩展语法，其本质是React.createElement(component,props,...children)方法的语法糖
 
@@ -27,7 +27,7 @@ JSON格式如下：
 "{"name"："Tom","age":19}"
 ```
 
-# jsx语法规则
+## jsx语法规则
 
 1、定义虚拟DOM时，不要写引号。
 
