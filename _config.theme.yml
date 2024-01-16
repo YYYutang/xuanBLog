@@ -13,7 +13,7 @@ preconnect:
   # - https://unpkg.com
 
 open_graph:
-  enable: true
+  enable: false
   twitter_id: # for open_graph meta
 
 
