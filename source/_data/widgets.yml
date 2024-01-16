@@ -7,9 +7,9 @@ tagcloud:
   amount: 100
   orderby: name
   order: 1 # 1, sac 升序；-1, desc 降序
-  color: false # 使用颜色
-  start_color:  # 开始的颜色。您可使用十六进位值（'#b700ff'），rgba（rgba(183, 0, 255, 1)），hsla（hsla(283, 100%, 50%, 1)）或 颜色关键字。此变量仅在 color 参数开启时才有用。
-  end_color:  # 结束的颜色。您可使用十六进位值（'#b700ff'），rgba（rgba(183, 0, 255, 1)），hsla（hsla(283, 100%, 50%, 1)）或 颜色关键字。此变量仅在 color 参数开启时才有用。
+  color: true# 使用颜色
+  start_color: '#D8E2EB' # 开始的颜色。您可使用十六进位值（'#b700ff'），rgba（rgba(183, 0, 255, 1)），hsla（hsla(283, 100%, 50%, 1)）或 颜色关键字。此变量仅在 color 参数开启时才有用。
+  end_color: '#8897AA'# 结束的颜色。您可使用十六进位值（'#b700ff'），rgba（rgba(183, 0, 255, 1)），hsla（hsla(283, 100%, 50%, 1)）或 颜色关键字。此变量仅在 color 参数开启时才有用。
   show_count: true# 显示每个标签的文章总数
 search:
   layout: search
@@ -30,7 +30,7 @@ timeline:
   layout: timeline
   title: 近期动态
   api: https://api.github.com/repos/YYYutang/xuanBlog/issues # 若你想限制数量，在api链接后面加上?per_page=1指限制为1条
-  user: # 是否过滤只显示某个人发布的内容，如果要筛选多人，用英文逗号隔开
+  user: YYYutang # 是否过滤只显示某个人发布的内容，如果要筛选多人，用英文逗号隔开
   hide: title # 隐藏标题或底部 # 此功能需要 Stellar v1.13.0
 
 toc:
