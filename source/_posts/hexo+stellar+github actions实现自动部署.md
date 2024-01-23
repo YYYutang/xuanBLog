@@ -71,7 +71,7 @@ on:
 
 env:
   GIT_USER: YYYutang
-  GIT_EMAIL: 1036503272@qq.com
+  GIT_EMAIL: email@email.com
   THEME_REPO: YYYutang/hexo-theme-stellar
   THEME_BRANCH: main
   DEPLOY_REPO: YYYutang/YYYutang.github.io
