@@ -1,0 +1,11 @@
+sidebar:
+  widgets:
+    home: search,recent,tagcloud,timeline
+  menu:
+    home: '[主页](/)'
+    post: '[笔记](/notes/)'
+    notes: '[随笔](/随笔/)'
+    more: '[更多](/more/)'
+
+article:
+  auto_excerpt: 200
