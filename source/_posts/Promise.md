@@ -2,7 +2,7 @@
 title: Promise
 categories: Javascript
 tags: [Javascript,前端]
-cover: /picture/javascript.jpg
+cover: /picture/ES6.jpg
 date: 2024-03-03 14:34
 ---
 
