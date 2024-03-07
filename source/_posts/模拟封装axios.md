@@ -2,7 +2,7 @@
 title: 模拟封装Axios
 categories: Axios
 tags: [Ajax,Axios,前端]
-cover: /picture/ajax.jpg
+cover: /picture/axios.jpg
 date: 2024-03-07 13:50
 ---
 

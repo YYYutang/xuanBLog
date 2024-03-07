@@ -2,7 +2,7 @@
 title: XMLHttpRequest
 categories: Ajax
 tags: [Ajax,前端]
-cover: /picture/ajax.jpg
+cover: /picture/axios.jpg
 date: 2024-03-07 13:50
 ---
 
