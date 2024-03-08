@@ -22,11 +22,11 @@ rightbar: [timeline, tagcloud]
 
 MBTI：ENTP
 
-{% audio type:2 netease:9399404328 autoplay:1 %}
-
 {% endbox %}
 
-{% grid bg:card c:2  %}
+{% audio type:2 netease:9399404328 autoplay:1 %}
+
+{% grid bg:card w:300px  %}
 <!-- cell -->
 
 #### About Me
