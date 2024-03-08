@@ -9,5 +9,8 @@ rightbar: [timeline, tagcloud]
 ---
 
 
-{% image /picture/cover.jpg description: 欢迎来到小璇妙妙屋 download:true %}
+{% banner 欢迎来到小璇妙妙屋 bg:/picture/cover.jpg %}
 
+{% endbanner %}
+
+{% albums group_id %}
