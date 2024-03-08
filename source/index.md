@@ -9,11 +9,11 @@ rightbar: [timeline, tagcloud]
 ---
 
 
-{% banner 欢迎来到小璇妙妙屋 bg:/picture/cover.jpg  align:center%}
+{% banner 欢迎来到小璇妙妙屋 bg:/picture/cover.jpg  %}
 
 {% endbanner %}
 
-{% box About Me color:light %}
+{% box About Me color:light align:center %}
 计算机科学与技术专业研二在读
 
 吭哧吭哧学习前端中
@@ -36,21 +36,9 @@ MBTI：ENTP
 
 ![Beauty Behind The Madness](/picture/twkd.jpg)
 
-![Did You Know that there's a tunnel under Ocean Blvd](/picture/ldr.jpg)
-
-![Desire,I Want To Turn Into You](/picture/em.jpg)
-
-![melodrama](/picture/melodrama.jpg)
-
-![Norman Fucking Rockwell](/picture/nfr.jpg)
-
-![Mr. Morale & The Big Steppers](/picture/kendrick.jpg)
-
-![asuka](/picture/mrx.jpg)
-
 {% endgallery %}
 
-{% box 今年小目标 child:okr color:light  %}
+{% box 今年小目标 child:okr color:light  align:center %}
 
 {% okr o1 %}
 
@@ -58,6 +46,7 @@ MBTI：ENTP
 
 <!-- okr kr1 percent:0.7 status:unfinished -->
 跑通实验，确定代码的架构不再改动
+
 - 跑通原本算法的代码  {% mark color:green 已完成 %}
 - 跑通修改后的版本的代码  {% mark color:green 已完成 %}
 - 敲定修改后的代码，并确认大的架构不再改动  {% mark 50 %}
@@ -85,3 +74,20 @@ MBTI：ENTP
 {% endokr %}
 
 {% endbox %}
+
+{% gallery %}
+
+![Did You Know that there's a tunnel under Ocean Blvd](/picture/ldr.jpg)
+
+![Desire,I Want To Turn Into You](/picture/em.jpg)
+
+![melodrama](/picture/melodrama.jpg)
+
+![Norman Fucking Rockwell](/picture/nfr.jpg)
+
+![Mr. Morale & The Big Steppers](/picture/kendrick.jpg)
+
+![asuka](/picture/mrx.jpg)
+
+{% endgallery %}
+
