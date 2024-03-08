@@ -65,6 +65,7 @@ site_tree:
   home:
     leftbar: welcome, menubar, ghuser, recent
     rightbar: timeline, tagcloud
+    menu_id: main
   # 博客主页配置
   index_main:
     base_dir: main# 只影响自动生成的页面路径
