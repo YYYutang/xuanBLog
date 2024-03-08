@@ -13,4 +13,25 @@ rightbar: [timeline, tagcloud]
 
 {% endbanner %}
 
-{% albums group_id %}
+{% box About Me color:light %}
+计算机科学与技术专业研二在读
+
+吭哧吭哧学习前端中
+
+{% endbox %}
+
+{% gallery %}
+![](/picture/SOS.jpg)
+![ts](/picture/ts.jpg)
+
+![car](/picture/car.jpg)
+
+![ts](/picture/swim.jpg)
+
+![ts](/picture/dt.jpg)
+
+![ts](/picture/twkd.jpg)
+
+![ts](/picture/ldr.jpg)
+
+{% endgallery %}
