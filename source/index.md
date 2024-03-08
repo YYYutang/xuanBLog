@@ -13,10 +13,7 @@ rightbar: [timeline, tagcloud]
 
 {% endbanner %}
 
-{% audio type:2 netease:9399404328 autoplay:0 %}
-
-{% grid bg:card  %}
-<!-- cell -->
+{% box color:light %}
 
 #### About Me
 
@@ -28,7 +25,7 @@ rightbar: [timeline, tagcloud]
 
 MBTI：ENTP
 
-{% endgrid %}
+{% endbox %}
 
 {% gallery %}
 ![SOS](/picture/SOS.jpg)
