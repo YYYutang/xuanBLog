@@ -22,7 +22,26 @@ rightbar: [timeline, tagcloud]
 
 MBTI：ENTP
 
+{% audio type:2 netease:9399404328 autoplay:1 %}
+
 {% endbox %}
+
+{% grid bg:card c:2  %}
+<!-- cell -->
+
+#### About Me
+
+计算机科学与技术专业研二在读
+
+吭哧吭哧学习前端中
+
+酷爱听歌，并且什么风格都听
+
+MBTI：ENTP
+
+<!-- cell -->
+{% audio type:2 netease:9399404328 autoplay:1 %}
+{% endgrid %}
 
 {% gallery %}
 ![SOS](/picture/SOS.jpg)
