@@ -42,34 +42,37 @@ MBTI：ENTP
 
 ![melodrama](/picture/melodrama.jpg)
 
+![Norman Fucking Rockwell](/picture/nfr.jpg)
+
+![Mr. Morale & The Big Steppers](/picture/kendrick.jpg)
+
 {% endgallery %}
 
 {% okr o1 %}
 
 2024年的小目标：完成目前的论文写作并收到accept
-来自2025年的复盘：已《基本》实现目标 {% emoji tieba 滑稽 %}
 
 <!-- okr kr1 percent:0.7 status:unfinished -->
 跑通实验，确定代码的架构不再改动
-- 跑通原本算法的代码 {% mark color:green 已完成 %}
-- 跑通修改后的版本的代码 {% mark color:green 已完成 %}
-- 敲定修改后的代码，并确认大的架构不再改动 {% mark 50 %}
+- 跑通原本算法的代码  {% mark color:green 已完成 %}
+- 跑通修改后的版本的代码  {% mark color:green 已完成 %}
+- 敲定修改后的代码，并确认大的架构不再改动  {% mark 50 %}
 
 <!-- okr kr2 percent:0 status:unfinished -->
 完成中文版本论文的写作
 
-- 完成引言和背景介绍部分 {% mark 0 %}
-- 完成算法本身描述部分{% mark 0 %}
-- 完成实验结果对比和分析部分 {% mark 0 %}
-- 完成总结和引用部分 {% mark 0 %}
+- 完成引言和背景介绍部分  {% mark 0 %}
+- 完成算法本身描述部分 {% mark 0 %}
+- 完成实验结果对比和分析部分  {% mark 0 %}
+- 完成总结和引用部分  {% mark 0 %}
 
 <!-- okr kr3 percent:0 status:unfinished -->
 完成英文版本论文的写作
 
-- 简单翻译 {% mark 0 %}
-- 自己润色{% mark 0 %}
-- 老师修改 {% mark 0 %}
-- 完成润色 {% mark 0 %}
+- 简单翻译  {% mark 0 %}
+- 自己润色 {% mark 0 %}
+- 老师修改  {% mark 0 %}
+- 完成润色  {% mark 0 %}
 
 <!-- okr kr-4 status:unfinished -->
 投出并根据反馈修改
