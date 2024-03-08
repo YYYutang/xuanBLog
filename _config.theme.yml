@@ -38,7 +38,7 @@ menubar:
        theme: '#3DC550'
        icon: solar:notebook-bookmark-bold-duotone
        title: 博客
-       url: /wiki/
+       url: /_posts/
      - id: social
        theme: '#FA6400'
        icon: solar:planet-bold-duotone
@@ -91,7 +91,7 @@ site_tree:
   # -- 内容类页面 -- #
   # 博客文章内页配置
   main:
-    menu_id: main# 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
+    menu_id: main # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
     leftbar: related, ghuser, recent # for pages using 'layout:post'
     rightbar: ghrepo, toc
   post:
