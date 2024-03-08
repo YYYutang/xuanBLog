@@ -4,6 +4,8 @@ menu_id: main
 comments: false
 breadcrumb: false
 header: false
+leftbar: [welcome, ghuser, recent]
+rightbar: [timeline, tagcloud]
 ---
 
 
