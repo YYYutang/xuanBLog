@@ -454,7 +454,7 @@ plugins:
   # https://fancyapps.com/docs/ui/fancybox/
   # available for {% image xxx %}
   fancybox:
-    enable: true
+    enable: false
     js: https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js
     css: https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css
     # 可以处理评论区的图片（不支持 iframe 类评论系统）例如：
