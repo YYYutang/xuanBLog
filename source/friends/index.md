@@ -27,4 +27,4 @@ cell 6
 
 
 
-{% sites 友链 %}
+{% friends sites_design %}
