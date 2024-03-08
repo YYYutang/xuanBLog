@@ -33,12 +33,12 @@ menubar:
        theme: '#1BCDFC'
        icon: solar:documents-bold-duotone
        title: 主页
-       url: /main/
+       url: /
      - id: post
        theme: '#3DC550'
        icon: solar:notebook-bookmark-bold-duotone
        title: 博客
-       url: /
+       url: /posts/
      - id: social
        theme: '#FA6400'
        icon: solar:planet-bold-duotone
@@ -65,7 +65,6 @@ site_tree:
   home:
     leftbar: welcome, menubar, ghuser, recent
     rightbar: timeline, tagcloud
-    menu_id: main
   # 博客主页配置
   index_main:
     base_dir: main# 只影响自动生成的页面路径
