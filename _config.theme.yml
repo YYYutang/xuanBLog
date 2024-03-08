@@ -33,12 +33,12 @@ menubar:
        theme: '#1BCDFC'
        icon: solar:documents-bold-duotone
        title: 主页
-       url: /
+       url: /main/
      - id: post
        theme: '#3DC550'
        icon: solar:notebook-bookmark-bold-duotone
        title: 博客
-       url: /posts/
+       url: /
      - id: social
        theme: '#FA6400'
        icon: solar:planet-bold-duotone
