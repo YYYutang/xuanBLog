@@ -13,20 +13,9 @@ rightbar: [timeline, tagcloud]
 
 {% endbanner %}
 
-{% box About Me color:light %}
-计算机科学与技术专业研二在读
+{% audio type:2 netease:9399404328 autoplay:0 %}
 
-吭哧吭哧学习前端中
-
-酷爱听歌，并且什么风格都听
-
-MBTI：ENTP
-
-{% endbox %}
-
-{% audio type:2 netease:9399404328 autoplay:1 %}
-
-{% grid bg:card w:300px  %}
+{% grid bg:card  %}
 <!-- cell -->
 
 #### About Me
@@ -39,8 +28,6 @@ MBTI：ENTP
 
 MBTI：ENTP
 
-<!-- cell -->
-{% audio type:2 netease:9399404328 autoplay:1 %}
 {% endgrid %}
 
 {% gallery %}
