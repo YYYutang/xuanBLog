@@ -13,7 +13,7 @@ rightbar: [timeline, tagcloud]
 
 {% endbanner %}
 
-{% box About Me color:light align:center %}
+{% box About Me color:light %}
 计算机科学与技术专业研二在读
 
 吭哧吭哧学习前端中
@@ -38,7 +38,7 @@ MBTI：ENTP
 
 {% endgallery %}
 
-{% box 今年小目标 child:okr color:light  align:center %}
+{% box 今年第一个小目标 child:okr color:light %}
 
 {% okr o1 %}
 
@@ -91,3 +91,29 @@ MBTI：ENTP
 
 {% endgallery %}
 
+{% box 今年第二个小目标 child:okr color:light %}
+
+{% okr o1 %}
+
+2024年的小目标：找到合适的实习/工作
+
+<!-- okr kr1 percent:0.5 status:unfinished -->
+准备简历，完善经历
+
+- 完成简历  {% mark 50 %}
+- 准备八股  {% mark 50 %}
+- 准备算法题  {% mark 50 %}
+
+<!-- okr kr2 percent:0 status:unfinished -->
+投出简历，在面试的同时查漏补缺
+
+- 投出简历  {% mark 0 %}
+- 开始面试 {% mark 0 %}
+- 总结分析  {% mark 0 %}
+
+<!-- okr kr3 percent:0 status:unfinished -->
+拿到offer！
+
+{% endokr %}
+
+{% endbox %}
