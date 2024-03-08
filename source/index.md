@@ -9,7 +9,7 @@ rightbar: [timeline, tagcloud]
 ---
 
 
-{% banner 欢迎来到小璇妙妙屋 bg:/picture/cover.jpg %}
+{% banner 欢迎来到小璇妙妙屋 bg:/picture/cover.jpg  align:center%}
 
 {% endbanner %}
 
@@ -46,7 +46,11 @@ MBTI：ENTP
 
 ![Mr. Morale & The Big Steppers](/picture/kendrick.jpg)
 
+![asuka](/picture/mrx.jpg)
+
 {% endgallery %}
+
+{% box 今年小目标 child:okr color:light  %}
 
 {% okr o1 %}
 
@@ -79,3 +83,5 @@ MBTI：ENTP
 待续...
 
 {% endokr %}
+
+{% endbox %}
