@@ -75,6 +75,8 @@ site_tree:
   index_topic:
     base_dir: topic # 只影响自动生成的页面路径
     menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 topic 的页面默认使用这里配置的 menu_id
+    leftbar: welcome, ghuser, recent
+    rightbar: timeline, tagcloud
   # 文档列表页配置
   index_wiki:
     base_dir: wiki # 只影响自动生成的页面路径
@@ -87,7 +89,7 @@ site_tree:
   # 博客文章内页配置
   post:
     menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
-    leftbar: related, recent # for pages using 'layout:post'
+    leftbar: related, ghuser, recent # for pages using 'layout:post'
     rightbar: ghrepo, toc
   # 博客专栏文章内页配置
   topic:
