@@ -1,7 +1,7 @@
 ---
 title: ES6 proxy与reflection
 categories: ES6
-tags: [ES6,前端]
+tags: [ES6,Javascript,前端]
 cover: /picture/ES6.jpg
 date: 2024-03-13 08:22
 ---
