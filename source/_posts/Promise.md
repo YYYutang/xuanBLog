@@ -1,7 +1,7 @@
 ---
 title: Promise
-categories: Javascript
-tags: [Javascript,前端]
+categories: ES6
+tags: [ES6,Javascript,前端]
 cover: /picture/ES6.jpg
 date: 2024-03-03 14:34
 ---
