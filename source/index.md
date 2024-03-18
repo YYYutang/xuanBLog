@@ -103,9 +103,9 @@ MBTI：ENTP
 <!-- okr kr1 percent:0.5 status:unfinished -->
 准备简历，完善经历
 
-- 完成简历  {% mark 50 %}
-- 准备八股  {% mark 50 %}
-- 准备算法题  {% mark 50 %}
+- 完成简历  {% mark color:green 已完成 %}
+- 准备八股  {% mark 80 %}
+- 准备算法题  {% mark 60 %}
 
 <!-- okr kr2 percent:0 status:unfinished -->
 投出简历，在面试的同时查漏补缺
