@@ -110,7 +110,7 @@ MBTI：ENTP
 <!-- okr kr2 percent:0 status:unfinished -->
 投出简历，在面试的同时查漏补缺
 
-- 投出简历  {% mark 0 %}
+- 投出简历  {% mark 40 %}
 - 开始面试 {% mark 0 %}
 - 总结分析  {% mark 0 %}
 
