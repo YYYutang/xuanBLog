@@ -1,0 +1,103 @@
+---
+title: 细说webpack与vite的区别
+categories: Webpack
+tags: [Webpack,前端]
+cover: /picture/webpack.png
+date: 2024-03-29 15:20
+---
+
+周一面试的时候被问到两者之间的区别，当时答得并不是很好，今天从webpack和vite 的工作原理来分析vite与webpack的具体区别。
+
+## Webpack
+
+首先，众所周知，Webpack 是一个基于打包器的构建工具，同一个入口文件的代码会打包成一个 Bundle 文件。Webpack 长期来的一个痛点是对于大规模应用的应用启动和热更新速度很慢。
+
+![](image/image_AUCwqQPDJT.png)
+
+当文件发生变动时，整个 JavaScript Bundle 文件会被 Webpack 重新构建，这就是为什么使用 Webpack 的大规模应用在应用启动和热更新时速度很慢的原因，从而给进行大规模 JavaScript 应用的开发者造成了很差的开发体验。
+
+## Vite
+
+首先要了解，Vite 主要由两方面组成：
+
+- 一个开发服务器，基于 ESM 提供丰富的内建能力，比如速度快到惊人的模块热更新（HMR）；
+- 一套构建指令，使用 rollup 进行代码打包，且零配置即可输出用于生产环境的高度优化的静态代码。
+
+Vite 的核心能力和 `webpack` + `webpack-dev-server` 相似，但是在开发者体验上有一些提升：
+
+- 无论项目大小有多大，启动应用都只需更少的时间；
+- 无论项目大小有多大，`HMR（Hot Module Replacing）`热更新都可以做到及时响应；
+- 按需编译；
+- 零配置，开箱即用；
+- Esbuild 能力带来的 Typescript/jsx 的原生支持。
+
+Vite 的工作流程如下图所示，其实就是通过原生 ES Modules 托管源代码，本质上是让浏览器来接管部分打包器的工作。Vite 只会在浏览器请求发生时，按需将源码转成 ES Modules 格式返回给浏览器，由浏览器加载并执行 ES Modules 文件。
+
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2fb642edba6f4d648d960110cb9112ff~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp)
+
+接下来介绍一下vite的一些特性。
+
+### 热更新
+
+在基于 Bundle 构建的构建器中，当一个文件变动时，重新构建整个 Bundle 文件是非常低效的，且随着应用规模的上升，构建速度会直线下降。
+
+传统的构建器虽然提供了热更新的能力，但是也会存在随着应用规模上升，热更新速度显著下降的问题。
+
+Vite 基于 ES Modules按需提供源码文件，当一个文件被编辑后，Vite 只会重新编译并提供该文件。因此，无论项目规模多大，Vite 的热更新都可以保持快速更新。
+
+此外，Vite 合理利用浏览器缓存来加速页面加载，源码模块请求根据 `304 Not Modified` 进行协商缓存；依赖模块请求通过 `Cache-Control: max-age=31536000,immutable` 进行强缓存，因此一旦缓存，不会再次请求。
+
+### 生产环境仍需打包
+
+在生产环境使用 ES Modules会存在大量额外网络请求问题，因此生产环境不太试用 ES Modules，最好的方式还是代码进行 tree-shaking、懒加载、和 chunk 分隔等。
+
+那么生产环境的构建为什么不直接使用 esbuild，而是使用 rollup 呢？这是因为 esbuild 在代码分隔、css 处理等方面的功能仍在开发中，rollup 在应用打包方面更加的成熟且灵活。
+
+### 性能提升
+
+Vite 依托支持原生  ES Modules 模块的现代浏览器，极大的降低了应用的启动和重新构建时间。Vite 本质上是一个在开发环境为浏览器按需提供文件的 Web Server，这些文件包含源码模块和在第一次运行时使用 esbuild 预构建的依赖模块。
+
+Vite 和 Webpack 的主要不同在于开发环境下对于源码如何被托管以及支持哪种模块规范。
+
+### 依赖预构建
+
+Vite 在首次启动时，会进行依赖预构建。依赖预构建有两个目的：
+
+- CommonJs 和 UMD 的兼容性：开发阶段，Vite 的 Dev Server 将所有代码视为原生 ES 模块。因此，Vite 必须将 CommonJS 或 UMD 发布的依赖项转为 ESM。
+- 性能：Vite 将有很多内部模块的依赖视为单个模块，以提升页面加载性能。比如，`lodash-es` 拥有超过 600 个内部模块，当 `import {debounce} from 'lodash-es';` 时，浏览器会同时发起超过 600 个请求，并行请求过多将会显著影响页面加载性能。因此预构建将 `lodash-es` 视为一个模块，浏览器只需要发起一个请求。
+
+### 缓存
+
+#### 文件系统缓存
+
+Vite 会将预构建的依赖缓存到 `node_modules/.vite` ，它根据几个源决定是否需要重新运行预构建步骤：
+
+- `package.json` 中的 `dependencies` 列表；
+- 包管理的 `lockfile`，例如 `package-lock.json`，`yarn.lock` 或者 `pnpm-lock.yaml`
+- 可能在 `vite.config.js` 相关字段中配置过的。
+
+只有在上述其中一项发生更改时，才需要重新运行预构建。
+
+如果处于某些原因，你想要强制 Vite 重新构建依赖，你可以用 `--force` 命令选项启动开发服务器，或者手动删除 `node_modules/.vite` 目录。
+
+#### 浏览器缓存
+
+解析后的依赖请求会以 HTTP 头 `max-age=31536000,immutable` 强缓存，以提高开发时的页面重载性能。如果你想通过本地编辑来调试依赖项，可以：
+
+- 通过浏览器调试工具的 Network 选项卡暂时禁用缓存；
+- 重启 `Vite Dev Server`，并添加 `--force` 命令以重新构建依赖；
+- 重新载入页面。
+
+## vite比webpack快的原因
+
+综上所述，开发阶段vite的速度远快于webpack，主要是因为：
+**webpack是先打包再启动开发服务器，vite是直接启动开发服务器，然后按需编译依赖文件。**
+
+##### 下面详细来说：
+
+- webpack先打包，再启动开发服务器，请求服务器时直接给予打包后的结果；
+- vite直接启动开发服务器，请求哪个模块再对哪个模块进行实时编译；
+- 由于现代浏览器本身就支持ES Modules，会主动发起请求去获取所需文件。vite充分利用这点，将开发环境下的模块文件，就作为浏览器要执行的文件，而不是像webpack先打包，交给浏览器执行的文件是打包后的；
+- 由于vite启动的时候不需要打包，也就无需分析模块依赖、编译，所以启动速度非常快。当浏览器请求需要的模块时，再对模块进行编译，这种按需动态编译的模式，极大缩短了编译时间，当项目越大，文件越多时，vite的开发时优势越明显；
+- 在HRM方面，当某个模块内容改变时，让浏览器去重新请求该模块即可，而不是像webpack重新将该模块的所有依赖重新编译；
+- 当需要打包到生产环境时，vite使用传统的rollup进行打包，所以，vite的优势是体现在开发阶段，另外，由于vite使用的是ES Module，所以代码中不可以使用CommonJs；

@@ -8,6 +8,8 @@ date: 2024-03-21 12:09
 
 开始前首先贴上个人看到的比较好的一些讲述了vue底层原理的文章，大佬们写的非常详细，由浅入深。本系列是站在各位大佬的肩膀上进行的一个总结。
 
+[纯干货！图解Vue响应式原理 - 掘金 (juejin.cn)](https://juejin.cn/post/7074422512318152718?searchId=20240322002254657FCB2BDC7F699EAE05#heading-2)
+
 [https://juejin.cn/user/2647279730694029/posts](https://juejin.cn/user/2647279730694029/posts "https://juejin.cn/user/2647279730694029/posts")
 
 [https://juejin.cn/post/7076002091570823181#heading-12](https://juejin.cn/post/7076002091570823181#heading-12 "https://juejin.cn/post/7076002091570823181#heading-12")
