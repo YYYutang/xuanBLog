@@ -12,7 +12,7 @@ date: 2024-03-29 15:20
 
 首先，众所周知，Webpack 是一个基于打包器的构建工具，同一个入口文件的代码会打包成一个 Bundle 文件。Webpack 长期来的一个痛点是对于大规模应用的应用启动和热更新速度很慢。
 
-![](image/image_AUCwqQPDJT.png)
+![](image_AUCwqQPDJT.png)
 
 当文件发生变动时，整个 JavaScript Bundle 文件会被 Webpack 重新构建，这就是为什么使用 Webpack 的大规模应用在应用启动和热更新时速度很慢的原因，从而给进行大规模 JavaScript 应用的开发者造成了很差的开发体验。
 
@@ -33,7 +33,7 @@ Vite 的核心能力和 `webpack` + `webpack-dev-server` 相似，但是在开�
 
 Vite 的工作流程如下图所示，其实就是通过原生 ES Modules 托管源代码，本质上是让浏览器来接管部分打包器的工作。Vite 只会在浏览器请求发生时，按需将源码转成 ES Modules 格式返回给浏览器，由浏览器加载并执行 ES Modules 文件。
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2fb642edba6f4d648d960110cb9112ff~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp)
+![](1.png)
 
 接下来介绍一下vite的一些特性。
 
