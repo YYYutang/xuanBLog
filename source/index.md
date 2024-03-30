@@ -52,7 +52,7 @@ MBTI：ENTP
 
 - 跑通原本算法的代码  {% mark color:green 已完成 %}
 - 跑通修改后的版本的代码  {% mark color:green 已完成 %}
-- 敲定修改后的代码，并确认大的架构不再改动  {% mark 50 %}
+- 敲定修改后的代码，并确认大的架构不再改动  {% mark 80 %}
 
 <!-- okr kr2 percent:0 status:unfinished -->
 完成中文版本论文的写作
@@ -105,13 +105,13 @@ MBTI：ENTP
 
 - 完成简历  {% mark color:green 已完成 %}
 - 准备八股  {% mark 80 %}
-- 准备算法题  {% mark 60 %}
+- 准备算法题  {% mark 80 %}
 
-<!-- okr kr2 percent:0 status:unfinished -->
+<!-- okr kr2 percent:0.4 status:unfinished -->
 投出简历，在面试的同时查漏补缺
 
 - 投出简历  {% mark 40 %}
-- 开始面试 {% mark 0 %}
+- 开始面试 {% mark 50 %}
 - 总结分析  {% mark 0 %}
 
 <!-- okr kr3 percent:0 status:unfinished -->
